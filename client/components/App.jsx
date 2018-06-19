@@ -1,11 +1,20 @@
 import React from 'react'
 import Nav from './Nav'
-
+import Home from './Home'
 const App = () => {
   return (
     <div className='home'>
-      <h1>Taxonomic Wanks</h1>
-      <Nav />
+      <div>
+        <h1>Taxonomic Wanks</h1>
+      </div>
+      <div>
+        <div>
+          <Nav />
+        </div>
+        <div>
+          <Home />
+        </div>
+      </div>
     </div>
   )
 }
