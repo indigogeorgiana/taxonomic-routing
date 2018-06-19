@@ -1,5 +1,5 @@
 import React from 'react'
-import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 
 import SpeciesListing from './SpeciesListing'
 
@@ -10,14 +10,12 @@ const Rank = ({match}) => {
   const classification = ranks[rank].filter(item => item.name === name)[0]
 
   return (
-    <Router>
-      <div className='rank-listing'>
-        <h2>{name}</h2>
-        <p>{classification.description}</p>
-        <Link to={`${match.url}/species`}>Show species</Link>
-        <Route path='/rank/:rank/:name/species' component={SpeciesListing} />
-      </div>
-    </Router>
+    <div className='rank-listing'>
+      <h2>{name}</h2>
+      <p>{classification.description}</p>
+      <Link to={`${match.url}/species`}>Show species</Link>
+      <Route path='/rank/:rank/:name/species' component={SpeciesListing} />
+    </div>
   )
 }
 
