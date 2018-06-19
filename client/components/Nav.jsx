@@ -1,12 +1,12 @@
 import React from 'react'
-import {HashRouter as Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-const Nav = Props => {
+
+const Nav = props => {
   return (
     <div>
-      <h2>Nav</h2>
       <ul>
-        <li>{Props.name}</li>
+        <Link to={`/nav/${props.name}`}>{props.name}</Link>
       </ul>
     </div>
   )

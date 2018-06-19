@@ -10,10 +10,14 @@ class App extends React.Component {
       <Router>
         <div>
           <h1>React development has begun!</h1>
-
-          <Route path='/ranks/:name' component={Nav}
-          <p>{ranks.kingdoms[0].name}</p>
-
+          <h2>Nav</h2>
+          {
+            Object.keys(ranks).map(rank => {
+              return <Nav
+                key={rank}
+                name={rank} />
+            })
+          }
         </div>
 
       </Router>
@@ -21,5 +25,19 @@ class App extends React.Component {
   }
 }
 
-
 export default App
+
+// <Link to='/nav'>Nav</Link> - {' '}
+// <div>
+// <Route path='/nav/:name' render={() => {
+//     return (
+//       ranks.map(rank => {
+//         return <Nav
+//           key={rank.id}
+//           name={rank.name}
+//           descr={rank.description} />
+//       })
+//     )
+//   }} />
+// </div>
+// </div>
