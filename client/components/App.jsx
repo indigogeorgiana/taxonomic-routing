@@ -12,10 +12,10 @@ const App = () => {
     <Router>
       <div>
         <h1>Navigating the taxonomic ranks</h1>
-        <div className='Nav'>
+        <div className='Nav info'>
           <Nav ranks = {ranksList}/>
         </div>
-        <div className='Home'>
+        <div className='Home info'>
           <Route exact path='/' component={Home} />
           <Route path='/list/:rank' component={Classif}/>
         </div>
