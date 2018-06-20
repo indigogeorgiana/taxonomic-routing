@@ -12,24 +12,19 @@ class App extends React.Component {
         <div>
           <h1>React development has begun!</h1>
           <h2>Nav</h2>
-          {
-            Object.keys(ranks).map(rank => {
-              return <Nav
-                key={rank}
-                name={rank} />
-            })
-          }
+          <Nav />
 
           <Route path='/list/:rank' render={() => {
             return (
-              ranks.map(rank => {
+              Object.keys(ranks).map(rank => {
+                console.log(ranks[rank][0].name)
                 return <Home
-                  key={ranks.rank[name]}
-                  name={ranks.rank[name]} />
+                  key={ranks[rank].name}
+                  name={ranks[rank].name} />
               })
             )
           }
-          } /> 
+          } />
 
           {/* <Route path='//list/:rank' component={Home} /> */}
 

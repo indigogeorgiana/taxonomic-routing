@@ -2,8 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const Home = props => {
-  const rankName = props.match.params.rank
-  console.log(rankName)
+  // const rankName = props.match.params.rank
   return (
     <div>
       <ul>
@@ -13,4 +12,4 @@ const Home = props => {
   )
 }
 
-export default 
+export default Home
