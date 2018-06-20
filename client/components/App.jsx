@@ -10,12 +10,16 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <h1>React development has begun!</h1>
-          <Nav />
-
-          <Route path='/list/:name' component={List} />
-          <Route path='/rank/:rank/:name' component={Details} />
-
+          <div>
+            <h1>React development has begun!</h1>
+            <Nav />
+          </div>
+          <div>
+            <Route path='/list/:name' component={List} />
+          </div>
+          <div>
+            <Route path='/rank/:rank/:name' component={Details} />
+          </div>
         </div>
 
       </Router>
@@ -24,5 +28,3 @@ class App extends React.Component {
 }
 
 export default App
-
-

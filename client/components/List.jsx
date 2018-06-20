@@ -5,6 +5,7 @@ import ranks from '../../data/ranks'
 const List = (props) => {
   const rankName = props.match.params.name
   const thisRanks = ranks[rankName]
+  console.log('list-->' + thisRanks)
   return (
     <div>
       <h2>{rankName}</h2>
