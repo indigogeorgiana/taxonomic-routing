@@ -4,16 +4,16 @@ import {Link} from 'react-router-dom'
 
 const Rank = (props) => {
   const ranksRank = props.match.params.rank
-
+  const rank = ranks[ranksRank]
   return (
     <div className='rank'>
       <h2>{ranksRank}</h2>
       <ul>
-        {ranks.ranksRank.map(prop => {
+        {rank.map(rank => {
           return (
-            <li key={prop.id}>
-              <Link to={`/ranks/${prop}/${prop[1].name}`}>
-                {`${ranks[prop][1]['name']}`}
+            <li key={rank.id}>
+              <Link to={`/ranks/${ranksRank}/${rank.name}`}>
+                {rank.name}
               </Link>
             </li>
           )
