@@ -18,6 +18,7 @@ const NavList = props => {
           })
         }
       </ul>
+      <Link to='/'>Go Home</Link>
     </div>
   )
 }
