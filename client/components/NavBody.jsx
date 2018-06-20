@@ -7,10 +7,11 @@ const NavBody = props => {
   const name = props.match.params.name
   const rank = ranks[title]
 
-  let description = ''
-  for (let blog in ranks[title]) {
-    if (rank[blog].name === name) {
-      description = rank[blog].description
+  let description = () => {
+    for (let blog in ranks[title]) {
+      if (rank[blog].name === name) {
+        description = rank[blog].description
+      }
     }
   }
 
@@ -18,7 +19,6 @@ const NavBody = props => {
     <div className="homeCont">
       <h2>{name}</h2>
       <p>{description}</p>
-
       <Link to='/'><p className="return">Go Home</p></Link>
     </div>
   )
