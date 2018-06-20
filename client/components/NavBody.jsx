@@ -7,11 +7,9 @@ const NavBody = props => {
   const name = props.match.params.name
   const rank = ranks[title]
 
-  let description = () => {
-    for (let blog in ranks[title]) {
-      if (rank[blog].name === name) {
-        description = rank[blog].description
-      }
+  for (let id in ranks[title]) {
+    if (rank[id].name === name) {
+      var description = rank[id].description
     }
   }
 
