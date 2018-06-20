@@ -7,12 +7,11 @@ const Nav = () => {
   return (
     <div className='nav'>
       <h2>Nav</h2>
-      {rankArr.map((rank) => {
+      {rankArr.map(rank => {
         return (
-          <li><Link key={rank} to={`/list/${rank}`}>{`${rank}`} </Link></li>
+          <li key={rank}><Link to={`/list/${rank}`}>{`${rank}`}</Link></li>
         )
       })}
-
     </div>
   )
 }

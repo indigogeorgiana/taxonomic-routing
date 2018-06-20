@@ -1,8 +1,8 @@
-const ranks = {
-  kingdoms: [
-    {
+const ranks = { // object
+  kingdoms: [ // object.array
+    {  // object.array[index]
       id: 1,
-      name: 'Animalia',
+      name: 'Animalia', // object.array[index].name
       description: 'The animal kingdom emerged as a clade within Apoikozoa as the sister group to the choanoflagellates. Animals are motile, meaning they can move spontaneously and independently at some point in their lives. Their body plan eventually becomes fixed as they develop, although some undergo a process of metamorphosis later in their lives. All animals are heterotrophs: they must ingest other organisms or their products for sustenance.'
     },
     {
