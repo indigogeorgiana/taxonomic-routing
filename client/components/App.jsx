@@ -1,9 +1,10 @@
 import React from 'react'
-import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import {HashRouter as Router, Route} from 'react-router-dom'
 
 import Nav from './Nav'
 import Home from './Home'
 import ranks from '../../data/ranks'
+import Classif from './Classif'
 
 const App = () => {
   const ranksList = Object.keys(ranks)
@@ -15,7 +16,8 @@ const App = () => {
           <Nav ranks = {ranksList}/>
         </div>
         <div className='Home'>
-          <Home ranks = {ranks}/>
+          <Route exact path='/' component={Home} />
+          <Route path='/list/:rank' component={Classif}/>
         </div>
       </div>
     </Router>

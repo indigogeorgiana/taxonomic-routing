@@ -1,6 +1,5 @@
 import React from 'react'
-import {Link, Route} from 'react-router-dom'
-import Home from './Home'
+import {Link} from 'react-router-dom'
 
 const Nav = (props) => {
   return (
@@ -10,8 +9,7 @@ const Nav = (props) => {
         {props.ranks.map(rank => {
           return (
             <div key ='rank'>
-              <li><Link to= 'list/{rank}'>{rank}</Link></li>
-              <Route path='/list/:rank' component={Home} />
+              <li><Link to={`/list/${rank}`}>{rank}</Link></li>
             </div>
           )
         })
