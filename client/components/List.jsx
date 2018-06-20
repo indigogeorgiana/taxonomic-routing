@@ -4,26 +4,19 @@ import ranks from '../../data/ranks'
 
 const List = (props) => {
   const rankName = props.match.params.name
+  const thisRanks = ranks[rankName]
   return (
     <div>
       <h2>{rankName}</h2>
       <ul>
-        <Link to={`/list`}></Link>
+        {
+          thisRanks.map(thisRank => {
+            return <li key={thisRank.name}> <Link to={`/`}>{thisRank.name}</Link></li>
+          })
+        }
       </ul>
     </div>
   )
 }
 
 export default List
-
-
-// {
-//   return (
-//     Object.keys(ranks).map(rank => {
-//       console.log(ranks[rank][0].name)
-//       return <Home
-//         key={ranks[rank].name}
-//         name={ranks[rank].name} />
-//     })
-//   )
-// }
