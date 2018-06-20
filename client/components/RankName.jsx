@@ -1,13 +1,23 @@
 import React from 'react'
 import ranks from '../../data/ranks'
-import {Link} from 'react-router-dom'
 
 const RankName = (props) => {
-  const ranksArr = Object.keys(ranks)
-  //const rank = props.match.params.rank
+  const name = props.match.params.name
+  const ranksRank = props.match.params.rank
+  const rank = ranks[ranksRank]
+  let id = null
+  for (let index in rank) {
+    if (rank[index].name === name) {
+      id = index
+    }
+  }
 
   return (
-    <div>boo</div>
+    <div className='rankName'>
+      <h2>{name}</h2>
+
+      <p>{rank[id].description}</p>
+    </div>
   )
 }
 export default RankName

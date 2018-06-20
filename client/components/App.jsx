@@ -11,10 +11,11 @@ const App = () => {
       <div className='container'>
         <h1>Navigating the Taxonomic Ranks</h1>
         <div className='main'>
+
           <Route path='/' component={Nav}/>
           <Route exact path='/' component={Home} />
           <Route path='/list/:rank' component={Rank} />
-          <Route path='/rank/:rank/:name' component={RankName} />
+          <Route path='/ranks/:rank/:name' component={RankName} />
 
         </div>
       </div>
