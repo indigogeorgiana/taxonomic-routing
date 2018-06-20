@@ -1,17 +1,19 @@
 import React from 'react'
-import Ranks from '../data/ranks'
+import {Link} from 'react-router-dom'
+import ranks from '../data/ranks'
 
 const NavList = props => {
-  const name = props.match.params.rank
+  const title = props.match.params.rank
+  const rank = ranks[title]
   return (
     <div className="homeCont">
-      <h2>{name}</h2>
+      <h2>{title}</h2>
       <ul>
         {
-          Object.keys(Ranks).map((rank) => {
+          rank.map(rank => {
             return (
             // eslint-disable-next-line
-            <a href="#"><li>{rank.id}</li></a>
+            <li><Link to={`/list/${rank.name}`}>{rank.name}</Link></li>
             )
           })
         }
