@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import ranks from '../data/ranks'
 
 const Nav = props => {
@@ -10,7 +11,7 @@ const Nav = props => {
           Object.keys(ranks).map((rank) => {
             return (
             // eslint-disable-next-line
-            <li>{rank}</li>
+            <li><Link to={`/list/${rank}`}>{rank}</Link></li>
             )
           })
         }
