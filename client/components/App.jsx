@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './Nav'
 import NavList from './NavList'
 import Home from './Home'
+import NavBody from './NavBody'
 
 import {HashRouter as Router, Route} from 'react-router-dom'
 
@@ -17,7 +18,8 @@ class App extends React.Component {
           <Route path='/' component={Nav} />
           <Route exact path='/' component={Home} />
 
-          <Route path='/list/:rank' component={NavList} />
+          <Route exact path='/list/:rank' component={NavList} />
+          <Route path='/list/:rank/:name' component={NavBody} />
 
         </div>
       </Router>

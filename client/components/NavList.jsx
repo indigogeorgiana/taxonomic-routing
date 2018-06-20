@@ -12,13 +12,12 @@ const NavList = props => {
         {
           rank.map(rank => {
             return (
-            // eslint-disable-next-line
-            <li><Link to={`/list/${rank.name}`}>{rank.name}</Link></li>
+              <li key={rank.id}><Link to={`/list/${title}/${rank.name}`}>{rank.name}</Link></li>
             )
           })
         }
       </ul>
-      <Link to='/'>Go Home</Link>
+      <Link to='/'><p className="return">Go Home</p></Link>
     </div>
   )
 }
