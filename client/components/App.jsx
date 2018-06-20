@@ -1,22 +1,29 @@
 import React from 'react'
 import Nav from './Nav'
 import Home from './Home'
-const App = () => {
-  return (
-    <div className='home'>
-      <div>
-        <h1>Taxonomic Wanks</h1>
-      </div>
-      <div>
-        <div>
-          <Nav />
-        </div>
-        <div>
+
+// router
+import {HashRouter as Router, Route} from 'react-router-dom'
+
+class App extends React.Component {
+  render () {
+    return (
+      <Router>
+        <div className='home'>
+          <div>
+            <h1>Taxonomic Wanks</h1>
+          </div>
+
+          {/* <Link to='/home'></Link> */}
+
+          <Route path='/' component={Nav} />
+
           <Home />
+
         </div>
-      </div>
-    </div>
-  )
+      </Router>
+    )
+  }
 }
 
 export default App
