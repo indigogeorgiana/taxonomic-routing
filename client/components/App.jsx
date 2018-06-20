@@ -2,7 +2,8 @@ import React from 'react'
 import {HashRouter as Router, Route, Link} from 'react-router-dom'
 import ranks from '../../data/ranks'
 
-import Nav from './Nav'
+import Nav from './Nav.jsx'
+import Home from './Home.jsx'
 
 class App extends React.Component {
   render () {
@@ -18,6 +19,20 @@ class App extends React.Component {
                 name={rank} />
             })
           }
+
+          <Route path='/list/:rank' render={() => {
+            return (
+              ranks.map(rank => {
+                return <Home
+                  key={ranks.rank[name]}
+                  name={ranks.rank[name]} />
+              })
+            )
+          }
+          } /> 
+
+          {/* <Route path='//list/:rank' component={Home} /> */}
+
         </div>
 
       </Router>
