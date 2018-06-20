@@ -5,6 +5,7 @@ import ranks from '../../data/ranks'
 const Nav = props => {
   return (
     <div>
+      <h2>Nav</h2>
       <ul>
         {
           Object.keys(ranks).map(rank => {
