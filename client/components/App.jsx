@@ -10,14 +10,9 @@ class App extends React.Component {
       <Router>
         <div>
           <h1>Navigating the Taxonomic Ranks</h1>
-
-          <Link to='/nav'>Nav</Link> - {' '}
-          <Link to='/home'>Home</Link>
-
+              
           <Route exact path='/' component={Home} />
-          <Route path='/nav/' component={Nav} />
-
-          
+          <Route path='/' component={Nav} />
 
         </div>
       </Router>
