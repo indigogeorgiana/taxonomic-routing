@@ -11,7 +11,7 @@ class App extends React.Component {
       <Router>
         <div className='home'>
           <div>
-            <h1>Taxonomic Wanks</h1>
+            <h1>Taxonomic Spanks</h1>
           </div>
 
           {/* <Link to='/home'></Link> */}

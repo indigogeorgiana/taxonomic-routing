@@ -3,7 +3,7 @@ import ranks from '../data/ranks'
 
 const Nav = props => {
   return (
-    <div>
+    <div className="nav">
       <h2>Nav</h2>
       <ul>
         {
@@ -18,21 +18,5 @@ const Nav = props => {
     </div>
   )
 }
-// {Ranks.key}
-// const navTemps = Ranks => {
-//   return (
-//     <div>
-//       <h2>Nav</h2>
-//       <div>
-//         {
-//           Ranks.map(nav => {
-//             return <Nav
-//               key={Object.keys()} />
-//           })
-//         }
-//       </div>
-//     </div>
-//   )
-// }
 
 export default Nav
